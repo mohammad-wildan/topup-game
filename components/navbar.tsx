@@ -10,8 +10,8 @@ export default function Navbar({children}: NavbarProps) {
     return (
         <div>
             <div className="flex h-[85px] bg-[#3F327F] w-full justify-between">
-                <img className="ml-20 my-auto" src="Logo.png" alt="" />
-                 <div className=" flex space-x-10">
+                <img className="md:ml-20 ml-5 my-auto" src="Logo.png" alt="" />
+                 <div className="md:flex hidden space-x-10">
                     <div className="flex space-x-2">
                     <h1 className="my-auto text-white text-[14px]">Beranda</h1>
                     <img className="my-auto w-full" src="Frame.png" alt="" />
@@ -31,8 +31,8 @@ export default function Navbar({children}: NavbarProps) {
                 </div>
             </div>
             {children}
-            <div className="bg-[#3F327F] w-full px-30 space-y-20 py-10">
-                <div className="flex justify-between">
+            <div className="bg-[#3F327F] w-full md:px-30 px-10 space-y-20 py-10">
+                <div className="grid md:grid-cols-4 grid-cols-2 gap-y-2">
                 <div className="space-y-2">
                     <h1 className="text-white font-bold text-[18px] mb-8">Product</h1>
                     <p className="text-[14px] text-white">Landing Page</p>

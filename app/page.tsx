@@ -18,69 +18,66 @@ export default function Home() {
         <Banner/>
       <div className="flex h-40">
 
-  <div className="mx-auto flex space-x-10">
+  <div className="p-2 md:p-0 mx-auto grid md:grid-cols-5 grid-cols-2 space-x-10">
     
     <div className="flex items-center px-9 py-3 my-auto space-x-3 rounded-4xl
       border border-transparent hover:border-white
-      opacity-50 hover:opacity-100 transition-all">
+      opacity-50 hover:opacity-100 transition-all justify-center">
       <img src="Game.png" alt="" />
       <h1 className="mt-1 text-white">Game</h1>
     </div>
 
     <div className="flex items-center px-9 py-3 my-auto space-x-3 rounded-4xl
       border border-transparent hover:border-white
-      opacity-50 hover:opacity-100 transition-all">
+      opacity-50 hover:opacity-100 transition-all justify-center">
       <img src="Discount.png" alt="" />
       <h1 className="mt-1 text-white">Voucher</h1>
     </div>
 
     <div className="flex items-center px-9 py-3 my-auto space-x-3 rounded-4xl
       border border-transparent hover:border-white
-      opacity-50 hover:opacity-100 transition-all">
+      opacity-50 hover:opacity-100 transition-all justify-center">
       <img src="Category.png" alt="" />
       <h1 className="mt-1 text-white">Pulsa</h1>
     </div>
 
     <div className="flex items-center px-9 py-3 my-auto space-x-3 rounded-4xl
       border border-transparent hover:border-white
-      opacity-50 hover:opacity-100 transition-all">
+      opacity-50 hover:opacity-100 transition-all justify-center">
       <img src="Send.png" alt="" />
       <h1 className="mt-1 text-white">Paket Data</h1>
     </div>
 
     <div className="flex items-center px-9 py-3 my-auto space-x-3 rounded-4xl
       border border-transparent hover:border-white
-      opacity-50 hover:opacity-100 transition-all">
+      opacity-50 hover:opacity-100 transition-all justify-center">
       <img src="Star.png" alt="" />
       <h1 className="mt-1 text-white">Social Media</h1>
     </div>
 
   </div>
 </div>
-
-      
-
-      </div>
-      <div className="bg-[#362B6C] space-y-10">
-      <div className="grid grid-cols-2 gap-100 text-center w-full">
-  <h1 className={`${geostar.className} text-[36px] my-auto text-white`}>Game</h1>
-  <h2 className={`${geostar.className} text-[18px] my-auto text-[#FAD306]`}>Selengkapnya</h2>
+         </div>
+      <div className="bg-[#362B6C] space-y-10 p-5">
+      <div className="grid grid-cols-2 md:gap-100 text-center w-full">
+  <h1 className={`${geostar.className} md:text-4xl text-2xl my-auto text-white`}>Game</h1>
+  <h2 className={`${geostar.className} md:text-2xl my-auto text-[#FAD306]`}>Selengkapnya</h2>
       </div>
       <div className="w-full flex justify-center">
-      <div className="grid grid-cols-4 gap-x-3 gap-y-5 pb-30 ">
+      <div className="grid md:grid-cols-4 grid-cols-2 gap-x-3 gap-y-5 pb-30 ">
      {games.map((game) => (
         <div key={game.id}>
           <div className="relative group">
           <div className="relative group-hover:blur-sm transition-all duration-300">
           <img className="rounded-2xl shadow-2xl " src={game.gambar} alt="" />
-          <div className="space-y-2 text-center absolute -bottom-1 backdrop-blur-sm w-[310px] h-[92px] rounded-b-2xl bg-black/20">
+          <div className="space-y-2 text-center absolute -bottom-1 backdrop-blur-sm w-full h-[92px] rounded-b-2xl bg-black/20">
           <h1 className="text-[#CDCDCD] text-[14px] pt-4">{game.publisher}</h1>
           <h2 className="text-white text-[18px] font-bold">{game.name}</h2>
-          <img className="absolute bottom-15 left-5" src={game.item} alt="" />
+          <img className="absolute bottom-15 md:left-5 left-2" src={game.item} alt="" />
           </div>
           </div>
-          <button className="group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 opacity-0 absolute left-19 top-30 text-white text-[16px] py-3 px-6
-            bg-gradient-to-l from-[#FC00FF] via-[#7278ED] to-[#00DBDE] rounded-4xl">Top Up Sekarang</button>
+          <button className="group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300  absolute md:left-19 top-30 text-white md:py-3 md:px-6
+            bg-gradient-to-l from-[#FC00FF] via-[#7278ED] to-[#00DBDE] rounded-4xl py-3 px-5 left-8">Top Up Sekarang</button>
           </div>
         </div>
       ))}
