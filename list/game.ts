@@ -2,56 +2,65 @@ export interface Game {
     id: number;
     gambar: string;
     publisher: string;
-    name: string
+    name: string;
+    item: string;
 }
 
 export const games: Game[] = [
     {
         id: 1,
-        gambar:"Rectangle 6.png",
+        gambar:"ml.png",
         publisher:"Moonton",
-        name: "Mobile legends: Bang Bang"
+        name: "Mobile legends: Bang Bang",
+        item: "dm.png",
     },
     {
         id: 2,
-        gambar:"Rectangle 7-5.png",
+        gambar:"ff.png",
         publisher:"Garena",
-        name: "Free Fire"
+        name: "Free Fire",
+         item: "dm.png",
     },
     {
         id: 3,
-        gambar:"Rectangle 5.png",
+        gambar:"genshin.png",
         publisher:"miHoYo",
-        name: "Genshin Impact"
+        name: "Genshin Impact",
+        item: "gems.png",
     },
     {
         id: 4,
-        gambar:"Rectangle 7-4.png",
+        gambar:"pubg.png",
         publisher:"Tencent",
-        name: "PUBG"
+        name: "PUBG",
+         item: "uc.png",
     },
     {
         id: 5,
-        gambar:"Rectangle 7-3.png",
+        gambar:"domino.png",
         publisher:"Poker City",
-        name: "Higgs Domino"
+        name: "Higgs Domino",
+         item: "chip.png",
     },
     {
         id: 6,
-        gambar:"Rectangle 7-2.png",
+        gambar:"codm.png",
         publisher:"Garena",
-        name: "Call of Duty Mobile"
+        name: "Call of Duty Mobile",
+         item: "cp.png",
     },
     {
         id: 7,
-        gambar:"Rectangle 7-1.png",
+        gambar:"hago.png",
         publisher:"Hago id",
-        name: "Hago"
+        name: "Hago",
+         item: "dm.png",
     },
     {
         id: 8,
-        gambar:"Rectangle 7.png",
+        gambar:"valorant.png",
         publisher:"Riot Game",
-        name: "Valorant"
+        name: "Valorant",
+         item: "dm.png",
     },
 ]

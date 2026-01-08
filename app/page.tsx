@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Geostar_Fill } from "next/font/google";
 import {games} from "@/list/game";
-
+import { pulsas } from "@/list/pulsa";
 
 const geostar = Geostar_Fill({
   subsets: ["latin"],
@@ -47,25 +47,45 @@ export default function Home() {
       
 
       </div>
-      <div className="bg-[#362B6C]">
-      <div className="flex justify-between px-10">
+      <div className="bg-[#362B6C] space-y-10">
+      <div className="grid grid-cols-2 text-center w-full">
   <h1 className={`${geostar.className} text-[36px] my-auto text-white`}>Game</h1>
   <h2 className={`${geostar.className} text-[18px] my-auto text-[#FAD306]`}>Selengkapnya</h2>
       </div>
-      <div className="grid grid-cols-4 w-350 mx-auto">
+      <div className="grid grid-cols-4 w-325 gap-y-5 pb-30 mx-auto">
      {games.map((game) => (
         <div key={game.id}>
           <div className="relative hover:blur-sm transition-all duration-300">
-          <img className="" src={game.gambar} alt="" />
-          <h1 className="absolute top-40 left-20 hidden">Top Up Sekarang</h1>
-          <div className="text-center absolute bottom-15 left-1/2 -translate-x-1/2">
-          <h1 className="text-[#CDCDCD] text-[14px] ">{game.publisher}</h1>
+          <img className="rounded-2xl shadow-2xl" src={game.gambar} alt="" />
+          <div className="space-y-2 text-center absolute -bottom-1 backdrop-blur-sm w-[310px] h-[92px] rounded-b-2xl bg-black/20">
+          <h1 className="text-[#CDCDCD] text-[14px] pt-4">{game.publisher}</h1>
           <h2 className="text-white text-[18px] font-bold">{game.name}</h2>
+          <img className="absolute bottom-15 left-5" src={game.item} alt="" />
           </div>
           </div>
         </div>
       ))}
     </div>
+      </div>
+
+      <div className="bg-[#362B6C] space-y-10">
+        <div className="flex justify-between">
+  <h1 className={`${geostar.className} text-[36px] my-auto text-white`}>Pulsa</h1>
+  <h2 className={`${geostar.className} text-[18px] my-auto text-[#FAD306]`}>Selengkapnya</h2>
+      </div>
+      <div className="grid grid-cols-4 w-325 mx-auto pb-10">
+        {pulsas.map((pulsa) => (
+          <div key={pulsa.id}>
+            <div className="relative hover:blur-sm transition-all duration-300">
+            <img className="rounded-2xl shadow-2xl" src={pulsa.gambar} alt="" />
+            <div className="space-y-2 text-center absolute -bottom-1 backdrop-blur-sm w-[310px] h-[108px] rounded-b-2xl bg-black/20">
+            <h1 className="text-white text-centertext-[18px] mt-10 font-bold">{pulsa.name}</h1>
+            </div>
+            <img className="absolute bottom-20 left-5 shadow-2xl" src={pulsa.logo} alt="" />
+            </div>
+          </div>
+        ))}
+      </div>
       </div>
       </div>
   );
