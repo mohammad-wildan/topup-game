@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Geostar_Fill } from "next/font/google";
 import {games} from "@/list/game";
 import { pulsas } from "@/list/pulsa";
+import Banner from "@/components/banner";
 
 const geostar = Geostar_Fill({
   subsets: ["latin"],
@@ -14,8 +15,9 @@ export default function Home() {
   return (
     <div>
     <div className="bg-[#362B6C]">
-    
+        <Banner/>
       <div className="flex h-40">
+
   <div className="mx-auto flex space-x-10">
     
     <div className="flex items-center px-9 py-3 my-auto space-x-3 rounded-4xl
