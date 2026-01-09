@@ -18,37 +18,37 @@ export default function Home() {
         <Banner/>
       <div className="flex h-40">
 
-  <div className="p-2 md:p-0 mx-auto grid md:grid-cols-5 grid-cols-2 space-x-10">
+  <div className="p-2 md:p-0 mx-auto grid md:grid-cols-5 grid-cols-2 space-x-10 text-2xs">
     
-    <div className="flex items-center px-9 py-3 my-auto space-x-3 rounded-4xl
+    <div className="flex items-center  md:px-9 md:py-3 px-2 py-3  my-auto space-x-3 rounded-4xl
       border border-transparent hover:border-white
       opacity-50 hover:opacity-100 transition-all justify-center">
       <img src="Game.png" alt="" />
-      <h1 className="mt-1 text-white">Game</h1>
+      <h1 className="mt-1 text-white ">Game</h1>
     </div>
 
-    <div className="flex items-center px-9 py-3 my-auto space-x-3 rounded-4xl
+    <div className="flex items-center  md:px-9 md:py-3 px-2 py-3 my-auto space-x-3 rounded-4xl
       border border-transparent hover:border-white
       opacity-50 hover:opacity-100 transition-all justify-center">
       <img src="Discount.png" alt="" />
       <h1 className="mt-1 text-white">Voucher</h1>
     </div>
 
-    <div className="flex items-center px-9 py-3 my-auto space-x-3 rounded-4xl
+    <div className="flex items-center  md:px-9 md:py-3 px-2 py-3 my-auto space-x-3 rounded-4xl
       border border-transparent hover:border-white
       opacity-50 hover:opacity-100 transition-all justify-center">
       <img src="Category.png" alt="" />
       <h1 className="mt-1 text-white">Pulsa</h1>
     </div>
 
-    <div className="flex items-center px-9 py-3 my-auto space-x-3 rounded-4xl
+    <div className="flex items-center md:px-9 md:py-3 px-2 py-3 my-auto space-x-3 rounded-4xl
       border border-transparent hover:border-white
       opacity-50 hover:opacity-100 transition-all justify-center">
       <img src="Send.png" alt="" />
       <h1 className="mt-1 text-white">Paket Data</h1>
     </div>
 
-    <div className="flex items-center px-9 py-3 my-auto space-x-3 rounded-4xl
+    <div className="flex items-center  md:px-9 md:py-3 px-2 py-3 my-auto space-x-3 rounded-4xl
       border border-transparent hover:border-white
       opacity-50 hover:opacity-100 transition-all justify-center">
       <img src="Star.png" alt="" />
@@ -68,15 +68,15 @@ export default function Home() {
      {games.map((game) => (
         <div key={game.id}>
           <div className="relative group">
-          <div className="relative group-hover:blur-sm transition-all duration-300">
+          <div className="relative md:group-hover:blur-sm transition-all duration-300">
           <img className="rounded-2xl shadow-2xl " src={game.gambar} alt="" />
-          <div className="space-y-2 text-center absolute -bottom-1 backdrop-blur-sm w-full h-[92px] rounded-b-2xl bg-black/20">
-          <h1 className="text-[#CDCDCD] text-[14px] pt-4">{game.publisher}</h1>
-          <h2 className="text-white text-[18px] font-bold">{game.name}</h2>
-          <img className="absolute bottom-15 md:left-5 left-2" src={game.item} alt="" />
+          <div className="text-xs p-2 md:space-y-2 text-center absolute -bottom-1 backdrop-blur-sm w-full h-1/4 rounded-b-2xl bg-black/20">
+          <h1 className="text-[#CDCDCD] md:text-[14px] md:pt-4">{game.publisher}</h1>
+          <h2 className="text-white md:text-[18px] font-bold">{game.name}</h2>
+          <img className="absolute md:bottom-15 -top-1/3 md:left-5  w-10 md:w-[56]" src={game.item} alt="" />
           </div>
           </div>
-          <button className="group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300  absolute md:left-19 top-30 text-white md:py-3 md:px-6
+          <button className="md:group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 opacity-0  absolute md:left-19 top-30 text-white md:py-3 md:px-6
             bg-gradient-to-l from-[#FC00FF] via-[#7278ED] to-[#00DBDE] rounded-4xl py-3 px-5 left-8">Top Up Sekarang</button>
           </div>
         </div>
