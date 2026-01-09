@@ -70,10 +70,10 @@ export default function Home() {
           <div className="relative group">
           <div className="relative md:group-hover:blur-sm transition-all duration-300">
           <img className="rounded-2xl shadow-2xl " src={game.gambar} alt="" />
-          <div className="text-xs p-2 md:space-y-2 text-center absolute -bottom-1 backdrop-blur-sm w-full h-1/4 rounded-b-2xl bg-black/20">
+          <div className="text-xs p-2 md:space-y-2 space-y-1 text-center absolute -bottom-1 backdrop-blur-sm w-full h-1/3 rounded-b-2xl bg-black/20">
           <h1 className="text-[#CDCDCD] md:text-[14px] md:pt-4">{game.publisher}</h1>
           <h2 className="text-white md:text-[18px] font-bold">{game.name}</h2>
-          <img className="absolute md:bottom-15 -top-1/3 md:left-5  w-10 md:w-[56]" src={game.item} alt="" />
+          <img className="absolute md:bottom-15 -top-1/4 md:left-5  w-10 md:w-[56]" src={game.item} alt="" />
           </div>
           </div>
           <button className="md:group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 opacity-0  absolute md:left-19 top-30 text-white md:py-3 md:px-6
