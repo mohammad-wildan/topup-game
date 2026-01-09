@@ -70,7 +70,7 @@ export default function Home() {
           <div className="relative group">
           <div className="relative md:group-hover:blur-sm transition-all duration-300">
           <img className="rounded-2xl shadow-2xl " src={game.gambar} alt="" />
-          <div className=" overflow-hidden text-xs p-2 md:space-y-2 space-y-1 text-center absolute -bottom-1 backdrop-blur-sm w-full h-1/3 rounded-b-2xl bg-black/20">
+          <div className="overflow-hidden text-xs p-2 md:space-y-2 space-y-1 text-center absolute -bottom-1 backdrop-blur-sm w-full h-1/3 rounded-b-2xl bg-black/20">
           <h1 className="text-[#CDCDCD] md:text-[14px] md:pt-4">{game.publisher}</h1>
           <h2 className="text-white md:text-[18px] font-bold line-clamp-1">{game.name}</h2>
           </div>
@@ -85,24 +85,24 @@ export default function Home() {
       </div>
       </div>
 
-      <div className="bg-[#362B6C] space-y-10">
-        <div className="grid grid-cols-2 gap-100 text-center w-full">
+      <div className="bg-[#362B6C] space-y-10 p-5">
+        <div className="grid grid-cols-2 md:gap-100 text-center w-full">
   <h1 className={`${geostar.className} text-[36px] my-auto text-white`}>Pulsa</h1>
   <h2 className={`${geostar.className} text-[18px] my-auto text-[#FAD306]`}>Selengkapnya</h2>
       </div>
       <div className="w-full flex justify-center">
-      <div className="gap-x-3 grid grid-cols-4 pb-10">
+      <div className="gap-x-3 grid md:grid-cols-4 grid-cols-2 pb-10 gap-y-5">
         {pulsas.map((pulsa) => (
           <div key={pulsa.id}>
             <div className="relative group">
-            <div className="relative group-hover:blur-sm transition-all duration-300">
+            <div className="relative md:group-hover:blur-sm transition-all duration-300">
             <img className="rounded-2xl shadow-2xl" src={pulsa.gambar} alt="" />
-            <div className="space-y-2 text-center absolute -bottom-1 backdrop-blur-sm w-[310px] h-[108px] rounded-b-2xl bg-black/20">
-            <h1 className="text-white text-centertext-[18px] mt-10 font-bold">{pulsa.name}</h1>
+            <div className="overflow-hidden text-xs p-2 md:space-y-2 space-y-1 text-center absolute -bottom-1 backdrop-blur-sm w-full h-1/3 rounded-b-2xl bg-black/20">
+            <h1 className="text-white text-center md:text-[18px] md:mt-10 font-bold">{pulsa.name}</h1>
             </div>
-            <img className="absolute bottom-20 left-5 shadow-2xl" src={pulsa.logo} alt="" />
+            <img className="absolute bottom-1/4 left-1/20 md:w-[56] w-1/5" src={pulsa.logo} alt="" />
             </div>
-            <button className="group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 opacity-0 absolute left-19 top-30 text-white text-[16px] py-3 px-8
+            <button className="md:group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 opacity-0 absolute left-19 top-30 text-white text-[16px] py-3 px-8
             bg-gradient-to-l from-[#FC00FF] via-[#7278ED] to-[#00DBDE] rounded-4xl">Beli Sekarang</button>
             </div>
           </div>
