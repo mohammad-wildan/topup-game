@@ -7,10 +7,52 @@ type NavbarProps = {
 }
 
 export default function Navbar({children}: NavbarProps) {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <div>
             <div className="flex h-[85px] bg-[#3F327F] w-full justify-between">
                 <img className="md:ml-20 ml-5 my-auto" src="Logo.png" alt="" />
+                   {isOpen ? (
+                    <button onClick={() => setIsOpen(false)} className="md:hidden
+                    text-2xl font-bold text-white p-4"><img className="w-10 " src="hambuger.png" alt="" /></button>
+
+                ):(
+                    <button onClick={() => setIsOpen(true)} className="md:hidden
+                    text-2xl font-bold text-white p-4"><img className="w-10  rounded-xl" src="hambuger.png" alt="" /></button>
+                )}
+                        {isOpen && (
+                            <div className="fixed inset-0 bg-black/50 z-40"></div>
+                        )}
+                     <div className={"md:hidden z-50 fixed bg-[#3F327F] h-screen top-0"+(isOpen? " translate-x-0 right-0 " : " translate-x-full -right-200 ")+
+                        "transition-all duration-300 space-y-5 p-5 shadow-2xl"}>
+                            <div>
+                            <Link href="#" onClick={() => setIsOpen(false)}>
+                        <div className="flex items-center border-white w-full h-15 border-2 rounded-2xl px-5">
+                            <h1 className="text-white">Back</h1>
+                        </div>
+                            </Link>
+                            </div>
+                    <div className="flex space-x-2 border-white w-full h-15 border-2 rounded-2xl px-5">
+                    <h1 className="my-auto text-white text-[14px]">Beranda</h1>
+                    <img className="my-auto" src="Frame.png" alt="" />
+                    </div>
+                    <div className="flex space-x-2  border-white w-full h-15 border-2 rounded-2xl px-5">
+                    <h1 className="my-auto text-white text-[14px]">Promo</h1>
+                    <img className="my-auto" src="Frame2.png" alt="" />
+                    </div>
+                    <div className="flex space-x-2  border-white w-full h-15 border-2 rounded-2xl px-5">
+                    <h1 className="my-auto text-white text-[14px]">Layanan</h1>
+                    <img className="my-auto" src="Frame3.png" alt="" />
+                </div>  
+                <div className="my-auto mr-20 w-[178px] h-[44px] rounded-[4px] grid grid-cols-2 bg-gradient-to-l from-[#FF0066] via-[#D41872] to-[#A445B2]">
+                    <h1 className="my-auto ml-5 text-white">Masuk/Daftar</h1>
+                    <img className="ml-10 my-auto" src="Frame4.png" alt="" />
+                </div>
+                </div>
+                
+                
+
                  <div className="md:flex hidden space-x-10">
                     <div className="flex space-x-2">
                     <h1 className="my-auto text-white text-[14px]">Beranda</h1>

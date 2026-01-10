@@ -14,7 +14,7 @@ const geostar = Geostar_Fill({
 export default function Home() {
   return (
     <div>
-    <div className="bg-[#362B6C]">
+    <div className="bg-[#362B6C] w-full overflow-hidden pb-5 md:pb-0">
         <Banner/>
       <div className="flex h-40">
 
@@ -72,7 +72,7 @@ export default function Home() {
           <img className="rounded-2xl shadow-2xl " src={game.gambar} alt="" />
           <div className="overflow-hidden text-xs p-2 md:space-y-2 space-y-1 text-center absolute -bottom-1 backdrop-blur-sm w-full h-1/3 rounded-b-2xl bg-black/20">
           <h1 className="text-[#CDCDCD] md:text-[14px] md:pt-4">{game.publisher}</h1>
-          <h2 className="text-white md:text-[18px] font-bold line-clamp-1">{game.name}</h2>
+          <h2 className="text-white  md:text-[18px] font-bold line-clamp-1">{game.name}</h2>
           </div>
           <img className="absolute bottom-1/4 left-1/20 md:w-[56] w-1/5 " src={game.item} alt="" />
           </div>
